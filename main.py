@@ -1,7 +1,7 @@
 import sys
 from PySide2.QtWidgets import QMainWindow, QApplication
 
-# from ui_windows.ui_menu_alumno import Ui_MainWindow
+from ui_windows.ui_menu_alumno import Ui_MainWindow
 
 
 class MainWindow(QMainWindow):
