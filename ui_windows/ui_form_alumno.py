@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'form_alumnocDsuGU.ui'
+## Form generated from reading UI file 'form_alumnobinapr.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.6
 ##
@@ -81,12 +81,14 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
+        self.pb_limpiar.clicked.connect(MainWindow.clean_button)
+        self.pb_enviar.clicked.connect(MainWindow.send_button)
 
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Formulario Alumno", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Nombre", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Apellido", None))
         self.le_dni.setInputMask(QCoreApplication.translate("MainWindow", u"99.999.999", None))

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'menu_alumnorqhhuh.ui'
+## Form generated from reading UI file 'menu_alumnobKVAQk.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.6
 ##
@@ -48,6 +48,10 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
+        self.pb_ingresar_alumno.clicked.connect(MainWindow.show_new_student_window)
+        self.pb_crear_grupo.clicked.connect(MainWindow.show_create_group_window)
+        self.pb_lista_alumnos.clicked.connect(MainWindow.show_student_list_window)
+        self.pb_salir.clicked.connect(MainWindow.perform_exit)
 
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
