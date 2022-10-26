@@ -17,7 +17,7 @@ class MainWindow(QMainWindow):
 
         self.form_alumno_window = FormAlumnoWindow(self.lista_alumnos)
         self.form_grupo_window = FormGrupoWindow()
-        self.table_alumno_window = TableAlumnoWindow()
+        self.table_alumno_window = TableAlumnoWindow(self.lista_alumnos)
 
     def show_new_student_window(self):
         self.form_alumno_window.show()
@@ -27,7 +27,6 @@ class MainWindow(QMainWindow):
 
     def show_student_list_window(self):
         self.table_alumno_window.show()
-        print(self.lista_alumnos)
 
     def perform_exit(self):
         exit()
