@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'form_grupoCprDDK.ui'
+## Form generated from reading UI file 'form_grupogcoHsC.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.6
 ##
@@ -36,11 +36,13 @@ class Ui_MainWindow(object):
 
         self.le_nombre = QLineEdit(self.centralwidget)
         self.le_nombre.setObjectName(u"le_nombre")
+        self.le_nombre.setClearButtonEnabled(True)
 
         self.formLayout.setWidget(0, QFormLayout.FieldRole, self.le_nombre)
 
         self.le_descripcion = QLineEdit(self.centralwidget)
         self.le_descripcion.setObjectName(u"le_descripcion")
+        self.le_descripcion.setClearButtonEnabled(True)
 
         self.formLayout.setWidget(1, QFormLayout.FieldRole, self.le_descripcion)
 
@@ -68,12 +70,14 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
+        self.pb_limpiar.clicked.connect(MainWindow.clear_button)
+        self.pb_enviar.clicked.connect(MainWindow.send_button)
 
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Formulario Grupo", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Nombre", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Descripci\u00f3n", None))
         self.pb_limpiar.setText(QCoreApplication.translate("MainWindow", u"Limpiar", None))

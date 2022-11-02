@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'menu_alumnobKVAQk.ui'
+## Form generated from reading UI file 'menu_alumnoMDkIhC.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.6
 ##
@@ -57,7 +57,7 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Menu", None))
         self.pb_ingresar_alumno.setText(QCoreApplication.translate("MainWindow", u"Ingresar Alumno", None))
         self.pb_crear_grupo.setText(QCoreApplication.translate("MainWindow", u"Crear Grupo", None))
         self.pb_lista_alumnos.setText(QCoreApplication.translate("MainWindow", u"Lista Alumnos", None))

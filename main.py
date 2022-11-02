@@ -14,9 +14,10 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
 
         self.lista_alumnos = []
+        self.lista_grupos = []
 
         self.form_alumno_window = FormAlumnoWindow(self.lista_alumnos)
-        self.form_grupo_window = FormGrupoWindow()
+        self.form_grupo_window = FormGrupoWindow(self.lista_grupos)
         self.table_alumno_window = TableAlumnoWindow(self.lista_alumnos)
 
     def show_new_student_window(self):

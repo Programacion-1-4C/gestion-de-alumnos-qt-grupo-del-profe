@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'table_alumnothTjmN.ui'
+## Form generated from reading UI file 'table_alumnouyuZDe.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.6
 ##
@@ -55,12 +55,32 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addLayout(self.formLayout)
 
+        self.cb_grupos = QComboBox(self.centralwidget)
+        self.cb_grupos.setObjectName(u"cb_grupos")
+        sizePolicy = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.cb_grupos.sizePolicy().hasHeightForWidth())
+        self.cb_grupos.setSizePolicy(sizePolicy)
+
+        self.verticalLayout.addWidget(self.cb_grupos)
+
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.pb_borrar = QPushButton(self.centralwidget)
         self.pb_borrar.setObjectName(u"pb_borrar")
 
         self.horizontalLayout.addWidget(self.pb_borrar)
+
+        self.pb_grupos = QPushButton(self.centralwidget)
+        self.pb_grupos.setObjectName(u"pb_grupos")
+        sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.pb_grupos.sizePolicy().hasHeightForWidth())
+        self.pb_grupos.setSizePolicy(sizePolicy1)
+
+        self.horizontalLayout.addWidget(self.pb_grupos)
 
         self.pb_buscar = QPushButton(self.centralwidget)
         self.pb_buscar.setObjectName(u"pb_buscar")
@@ -76,12 +96,15 @@ class Ui_MainWindow(object):
         MainWindow.setStatusBar(self.statusbar)
 
         self.retranslateUi(MainWindow)
+        self.pb_buscar.clicked.connect(MainWindow.search_button)
+        self.pb_grupos.clicked.connect(MainWindow.assign_button)
+        self.pb_borrar.clicked.connect(MainWindow.clear_button)
 
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Tabla de Alumnos", None))
         ___qtablewidgetitem = self.tw_alumnos.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"DNI", None));
         ___qtablewidgetitem1 = self.tw_alumnos.horizontalHeaderItem(1)
@@ -93,6 +116,7 @@ class Ui_MainWindow(object):
         self.label.setText(QCoreApplication.translate("MainWindow", u"DNI", None))
         self.le_dni.setInputMask(QCoreApplication.translate("MainWindow", u"99.999.999", None))
         self.pb_borrar.setText(QCoreApplication.translate("MainWindow", u"Borrar", None))
+        self.pb_grupos.setText(QCoreApplication.translate("MainWindow", u"Asignar Grupo", None))
         self.pb_buscar.setText(QCoreApplication.translate("MainWindow", u"Buscar", None))
     # retranslateUi
 
