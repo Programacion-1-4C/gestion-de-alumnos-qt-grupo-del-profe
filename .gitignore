@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 originales_qt
+data/*
 
 # C extensions
 *.so

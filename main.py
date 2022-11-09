@@ -5,6 +5,7 @@ from py_windows.window_form_alumno import FormAlumnoWindow
 from py_windows.window_form_grupo import FormGrupoWindow
 from py_windows.window_table_alumno import TableAlumnoWindow
 from ui_windows.ui_menu_alumno import Ui_MainWindow
+from utils.save_disk import save_file, read_file
 
 
 class MainWindow(QMainWindow):
@@ -13,8 +14,8 @@ class MainWindow(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
-        self.lista_alumnos = []
-        self.lista_grupos = []
+        self.lista_alumnos = read_file()
+        self.lista_grupos = read_file("grupos.stu")
 
         self.form_alumno_window = FormAlumnoWindow(self.lista_alumnos)
         self.form_grupo_window = FormGrupoWindow(self.lista_grupos)
@@ -30,6 +31,8 @@ class MainWindow(QMainWindow):
         self.table_alumno_window.show()
 
     def perform_exit(self):
+        save_file(self.lista_alumnos)
+        save_file(self.lista_grupos, "grupos.stu")
         exit()
 
 
